@@ -1,0 +1,60 @@
+<!DOCTYPE html >
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="name=Jacky"/>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="email=no" />
+		<title>获得优惠机会</title>
+		<link href="../css/common.css" rel="stylesheet" type="text/css">
+		<link href="../css/order.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<script type="text/javascript" src="../js/loading.js"></script>
+		<article class="wrap  share">
+			<header class="head02">
+				<a class="back"></a>
+				<h2>获得优惠机会</h2>
+				<a class="more" onclick="popup({elem:'.nav',coverMove:true})"></a>
+			</header>
+			<nav class="nav hide" data-state="true">
+				<li><a href="#">菜单</a></li>
+				<li><a href="#">菜单</a></li>
+				<li><a href="#">菜单</a></li>
+				<li><a href="#">菜单</a></li>
+			</nav>
+			<section class="content">	
+				<div class="ewmBox">
+					<img class="bigImg" src="../images/order/bg_invsuggest.png"/>
+					<div class="ewmContent">
+						<img src="../images/order/img_qcdoe.png"/>
+						<p>邀请好友加入爱殿<br/>他们第一次预订时<br/>您可得到<span>1%的代金券</span></p>
+						<a class="shareBtn">邀请好友 赢取代金券</a>						
+					</div>
+					<div class="findBox">
+						<img class="logoImg" src="../images/common/logo.png"/>
+						<a class="findBtn"  href="#">立即寻找优质别墅</a>
+					</div>
+				</div>		
+				
+			</section>	
+			</ul>
+		</article>			
+	</body>
+</html>
+<script src="../js/zepto.min.js"></script>
+<script src="../js/jacky.js"></script>
+<script src="../js/common.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('.select').on('tap',function(){
+			if($(this).children('b').hasClass('active')){
+				$(this).children('b').removeClass('active');
+			}else{
+				$(this).children('b').addClass('active');
+			}
+		})
+	})
+</script>

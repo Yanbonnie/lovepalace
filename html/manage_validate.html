@@ -1,0 +1,54 @@
+<!DOCTYPE html >
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="name=Jacky"/>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="email=no" />
+		<title>会员中心</title>
+		<link href="../css/common.css" rel="stylesheet" type="text/css">
+		<link href="../css/user.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<script type="text/javascript" src="../js/loading.js"></script>
+		<article class="wrap member">
+			<header class="head02">
+				<div class="logo flex01 inline-box box-center">
+					<img src="../images/common/logo.png">
+				</div>
+				<a class="more" onclick="popup({elem:'.nav',coverMove:true})"></a>
+			</header>
+			<nav class="nav hide" data-state="true">
+				<li><a href="#">消息</a></li>
+				<li><a href="#">任务管理</a></li>
+				<li><a href="#">会员中心</a></li>
+			</nav>
+			<section class="content">
+				<ul class="con05">
+					<li class="box mt10">
+						<label class="flex01 inline-box">手机号</label>
+						<p class="flex01">
+							<input type="tel" placeholder="请输入手机号" />
+						</p>
+						<span class="flex01 inline-box box-center">
+							<input id="validate" onClick="validate(this)" class="btn_vali" type="button" value="发送验证码" />
+						</span>
+					</li>
+					<li class="box mt10">
+						<label class="flex01 inline-box">验证码</label>
+						<p class="flex01">
+							<input type="text" placeholder="请输入验证码" />
+						</p>
+					</li>
+				</ul>
+			</section>	
+			</ul>
+		</article>
+		<article class="bottomBtn"><a href="#">绑定微信</a></article>
+	</body>
+</html>
+<script src="../js/zepto.min.js"></script>
+<script src="../js/jacky.js"></script>
+<script src="../js/common.js"></script>

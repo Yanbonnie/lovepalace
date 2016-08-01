@@ -1,0 +1,160 @@
+<!DOCTYPE html >
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="name=Jacky" />
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="email=no" />
+		<title>订单详情</title>
+		<link href="../css/common.css" rel="stylesheet" type="text/css">
+		<link href="../css/product.css" rel="stylesheet" type="text/css">
+		<link href="../css/mobiscroll.css" rel="stylesheet" type="text/css">
+		<style>
+			.price_div {
+				color: #f00;
+				margin-top: -30px;
+				font-size: 10px;
+			}
+			
+			.lazy_li {
+				width: 100%;
+				background: white;
+				height: 3rem;
+				line-height: 3rem;
+				text-align: center;
+				border-bottom: 1px solid #CCCCCC;
+				border-top: 1px solid #CCCCCC;
+			}
+			
+			.section_momey {
+				width: 100%;
+				background: #FFFFFF;
+			}
+			
+			.section_momey .section_momey_ul {
+				width: 100%;
+			}
+			
+			.section_momey .section_momey_ul li:nth-child(1) {
+				padding-top: 2rem;
+			}
+			
+			.section_momey .section_momey_ul li:nth-child(2) {
+				padding-bottom: 2rem;
+			}
+			
+			.title_div {
+				height: 2rem;
+				background: #FF0000;
+				color: white;
+				text-align: center;
+				margin: 0 auto;
+				line-height: 2rem;
+				width: 5rem;
+				border-radius: 10px;
+			}
+			
+			.momey_div {
+				height: 6rem;
+				text-align: center;
+				margin: 0 auto;
+				border-radius: 10px;
+				color: red;
+				line-height: 6rem;
+			}
+			
+			.percent_div {
+				height: 3.5rem;
+				text-align: center;
+				margin: 0 auto;
+				width: 15rem;
+				border-bottom: 1px solid #CCCCCC;
+				border-top: 1px solid #CCCCCC;
+				line-height: 3.5rem;
+			}
+			
+			.number_momey {
+				font-size: 7rem;
+			}
+			
+			.md_foot {
+				display: none;
+			}
+			
+			.md_panel {
+				display: block;
+			}
+		</style>
+	</head>
+
+	<body>
+		<script type="text/javascript" src="../js/loading.js"></script>
+		<article class="wrap  productBook">
+			<header class="head02">
+				<a class="back"></a>
+				<h2>我的收益</h2>
+				<a class="more" onclick="popup({elem:'.nav',coverMove:true})"></a>
+			</header>
+			<nav class="nav hide" data-state="true">
+				<li><a href="#">菜单</a></li>
+				<li><a href="#">菜单</a></li>
+				<li><a href="#">菜单</a></li>
+				<li><a href="#">菜单</a></li>
+			</nav>
+			<section class="section_momey">
+				<ul class="section_momey_ul">
+					<li>
+						<div class="title_div">
+							总收益
+						</div>
+						<div class="momey_div">
+							￥<span class="number_momey">8000</span>
+						</div>
+					</li>
+					<li>
+						<div class="percent_div">
+							分成比例:<span class="number_percent">50</span>%
+						</div>
+					</li>
+				</ul>
+			</section>
+			<section class="content lazy">
+				<ul class="lazy_li">
+					<li data-mdtype='2' class="data">
+						<span>点击查看收益详情</span>
+					</li>
+				</ul>
+			</section>
+		</article>
+	</body>
+
+</html>
+<script src="../js/zepto.min.js"></script>
+<script src="../js/mdater.js"></script>
+<script src="../js/mobiscroll.min.js"></script>
+<script src="../js/jacky.js"></script>
+<script src="../js/common.js"></script>
+<script type="text/javascript">
+	var new_number = 0;
+	/*--新修改(2016-5-16 11:00)  开始--*/
+	var arr = [ //每个数组元素的前3位是日期，第四位没有的话，是不能选的日期；第四位有的话，就是要标价的日期
+		[2016, 6, 2, 1500],
+		[2016, 4, 20, 2500],
+		[2016, 4, 21, 1999],
+		[2016, 3, 2, 1800],
+		[2016, 4, 22, 1800],
+		[2016, 2, 5, 999]
+	];
+	var date_type = 0; //日期是否带价格：是为1；不是为0
+	/*--新修改(2016-5-16 11:00)  结束--*/
+	$('.data').mdater({});
+	$(function() {
+		$.each(arr, function(i, val) {
+			new_number = parseInt(new_number) + parseInt(val[3]);
+		});
+		$(".number_momey").text(new_number);
+	})
+</script>

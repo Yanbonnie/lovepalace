@@ -1,0 +1,155 @@
+<!DOCTYPE html >
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="name=Jacky"/>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="email=no" />
+		<title>我的服务</title>
+		<link href="../css/common.css" rel="stylesheet" type="text/css">
+		<link href="../css/product.css" rel="stylesheet" type="text/css">
+		<link href="../css/mobiscroll.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<script type="text/javascript" src="../js/loading.js"></script>
+		<article class="wrap">
+			<header class="head02">
+				<a class="back"></a>
+				<h2>我的服务</h2>
+				<a class="more" onclick="popup({elem:'.nav',coverMove:true})"></a>
+			</header>
+			<nav class="nav hide" data-state="true">
+				<li><a href="#">菜单</a></li>
+				<li><a href="#">菜单</a></li>
+				<li><a href="#">菜单</a></li>
+				<li><a href="#">菜单</a></li>
+			</nav>
+			<section class="content productBook">	
+				<nav class="navBox">
+					<a href="#" class="active"><span>订购服务</span></a>
+					<a href="#"><span>已购服务</span></a>
+				</nav>
+				<div class="service cleanning fn-clear mt10">
+					<h4>清洁服务</h4>
+					<ul>
+						<li data-attr="time">
+							<em class="icon1"></em>
+							<span class="select"><b></b></span>
+							<p>常规清洁</p>
+							<span class="timeData">01:13 - 01:05</span>
+						</li>
+						<li data-attr="time">
+							<em class="icon2"></em>
+							<span class="select"><b></b></span>
+							<p>深度清洁</p>
+							<span class="timeData">01:13 - 01:05</span>
+						</li>
+					</ul>
+				</div>
+				<div class="service upgrade fn-clear">
+					<h4>升级服务</h4>
+					<ul>
+						<li>
+							<em class="icon3"></em>
+							<span class="select"><b></b></span>
+							<p>HERMES</p>
+							<span>洗浴套装</span>
+						</li>
+						<li>
+							<em class="icon3"></em>
+							<span class="select"><b></b></span>
+							<p>BVLGARI</p>
+							<span>洗浴套装</span>
+						</li>
+						<li>
+							<em class="icon3"></em>
+							<span class="select"><b></b></span>
+							<p>FERAGA</p>
+							<span>洗浴套装</span>
+						</li>
+						<li data-attr="area">
+							<em class="icon4"></em>
+							<span class="select" onclick="return false"><b></b></span>
+							<p>接机服务</p>
+							<span class="timeData">白云机场 15:50</span>
+						</li>
+						<li>
+							<em class="icon5"></em>
+							<span class="select"><b></b></span>
+							<p>高铁接驳</p>
+						</li>
+						<li>
+							<em class="icon6"></em>
+							<span class="select"><b></b></span>
+							<p>专车</p>
+						</li>
+					</ul>
+				</div>				
+			</section>	
+			</ul>
+		</article>
+		<!--时间段或者地点选择-->
+		<article class="selectArea hide fixed" data-state="true">
+			<div class="cover"></div>
+			<div class="bg_alert01">
+				<a class="close" onclick="popup({elem:'.selectArea'})"></a>
+				<h2></h2>
+				<div class="content">
+					<div class="txt">
+						<div class="selectTime">
+							<p class="box"><label class="inline-box">请输入起始时间：</label><span class="timeBox flex01 first" data-name="time"></span></p>
+							<p class="box"><label class="inline-box">请输入结束时间：</label><span class="timeBox flex01 second" data-name="time"></span></p>
+							<a href="javascript:;" onclick="valueResult(this)">确认</a>
+						</div>
+						<div class="selectAddress">
+							<p class="box"><label class="inline-box">请输入机场名字：</label><input class="flex01"  type="text" class="first"/></p>
+							<p class="box"><label class="inline-box">预计到达时间：</label><span class="timeBox flex01 second" data-name="time"></span></p>
+							<a href="javascript:;" onclick="valueResult(this)">确认</a>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</article>
+	</body>
+</html>
+<script src="../js/zepto.min.js"></script>
+<script src="../js/mobiscroll.min.js"></script>
+<script src="../js/jacky.js"></script>
+<script src="../js/common.js"></script>
+<script type="text/javascript">
+
+	$(function(){
+		$('.select').on('tap',function(event){
+			event.preventDefault();
+			event.stopPropagation()
+			if($(this).children('b').hasClass('active')){
+				$(this).children('b').removeClass('active');
+			}else{
+				$(this).children('b').addClass('active');
+			}
+		})
+		
+		
+		$('.service li').on('tap',function(event){
+			event.preventDefault();
+			timeSelect(this);
+		})
+		$('[data-name=time]').each(function(i){
+	    	$('[data-name=time]').eq(i).mobiscroll().time({
+		        theme:'android-ics light',
+		        mode:'scroller',
+		        lang: 'zh',
+		        display:'modal',
+		       	preset: 'time',
+		        timeFormat: 'HH:ii',
+		        buttons : ['set'],
+		        callback : function(a){
+		        	$('[data-name=time]').eq(i).html(a);
+		        }
+		    });
+	    })
+	})
+</script>

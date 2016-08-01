@@ -1,0 +1,80 @@
+<!DOCTYPE html >
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="name=Jacky"/>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="email=no" />
+		<title>订单详情</title>
+		<link href="../css/common.css" rel="stylesheet" type="text/css">
+		<link href="../css/order.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<script type="text/javascript" src="../js/loading.js"></script>
+		<article class="wrap order orderDetails">
+			<header class="head02">
+				<a class="back"></a>
+				<h2>预订</h2>
+				<a class="more" onclick="popup({elem:'.nav',coverMove:true})"></a>
+			</header>
+			<nav class="nav hide" data-state="true">
+				<li><a href="#">菜单</a></li>
+				<li><a href="#">菜单</a></li>
+				<li><a href="#">菜单</a></li>
+				<li><a href="#">菜单</a></li>
+			</nav>
+			<section class="content lazy">
+				<div class="orderList lazy">
+					<div class="box">
+						<div class="imgBox inline-box"><img src="../images/common/default_big.jpg" data-src="../images/order/img_F.jpg"/></div>
+						<div class="textBox flex01">
+							<h3 class="shengl">爱色丽精品别墅凤泉路6号爱色丽精品别墅凤泉路6号爱色丽精品别墅凤泉路6号</h3>
+							<p class="shengl">中国，广州，番禺区，汉溪长隆</p>
+						</div>
+					</div>
+				</div>
+				<div class="personal box">
+					<p class="avatar inline-box box-center">
+						<img src="../images/common/default_small.jpg" data-src="../images/img_D.jpg"/>
+					</p>
+					<p class="txt flex01 box box-vertical box-vertical-left">
+						<label class="shengl">管家名字：李小萌李小萌李小萌李小萌李小萌李小萌李小萌李小萌</label>
+						<label class="shengl">管家电话：13913813716</label>
+					</p>
+					<p class="btn flex01 box box-right">
+						<a href="tel:13913813716">联系</a> 
+					</p>
+				</div>
+				<div class="checkInto">
+					<p>入住时间：2016-01-01<span>预约时间：2016-02-01&nbsp;15:00</span></p>
+					<p>退房时间：2016-01-05</p>
+					<p>共两天<a href="#">《房屋政策说明》</a></p>
+					<a href="javascript:;" class="noticeBtn">通知管家办理</a>
+				</div>
+				<table class="houseInfor"  border="8" >
+					<tr><td>房费：￥712 X 2天</td><td>￥1424</td></tr>
+					<tr><td>清洁费</td><td>￥50</td></tr>
+					<tr><td>服务费</td><td>￥50</td></tr>
+					<tr><td>保险费</td><td>￥60</td></tr>
+					<tr class="last"><td>总价</td><td>￥1574</td></tr>
+				</table>
+				<table class="personInfor mt10"  border="8" >
+					<tr><th colspan="3">入住信息</th></tr>
+					<tr><td>李响声</td><td>440105196705060318</td><td>14567529884</td></tr>
+					<tr><td>李响声</td><td>440105196705060318</td><td>14567529884</td></tr>
+				</table>
+				<table class="personInfor mt10"  border="8" >
+					<tr><th colspan="3">预订人信息</th></tr>
+					<tr><td>张三</td><td>13913813716</td><td>mail@qq.com</td></tr>
+				</table>
+			</section>	
+			</ul>
+		</article>	
+		<article class="bottomBtn"><a href="#">邀请好友，领取代金券</a></article>
+	</body>
+</html>
+<script src="../js/zepto.min.js"></script>
+<script src="../js/jacky.js"></script>
+<script src="../js/common.js"></script>

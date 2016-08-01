@@ -1,0 +1,89 @@
+<!DOCTYPE html >
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="name=Jacky"/>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="email=no" />
+		<title>点评</title>
+		<link href="../css/common.css" rel="stylesheet" type="text/css">
+		<link href="../css/user.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<script type="text/javascript" src="../js/loading.js"></script>
+		<article class="wrap  commentIndex">
+			<header class="head02">
+				<a class="back"></a>
+				<h2>点评</h2>
+				<a class="more" onclick="popup({elem:'.nav',coverMove:true})"></a>
+			</header>
+			<nav class="nav hide" data-state="true">
+				<li><a href="#">菜单</a></li>
+				<li><a href="#">菜单</a></li>
+				<li><a href="#">菜单</a></li>
+				<li><a href="#">菜单</a></li>
+			</nav>
+			<section class="content ">	
+				<div class="goodBox">
+					<h4>房屋守则</h4>
+					<div class="reviewBox">
+						<div class="operationBox fn-clear">
+							<b>总体</b>
+							<span class="icon1" data-state="true">点赞<label class="fadeOut">+1</label></span>
+							<span class="icon2" data-state="true">点赞<label class="fadeOut">+1</label></span>
+						</div>
+						<textarea placeholder="点评内容"></textarea>
+						
+					</div>
+					
+					<div class="loadImg fn-clear mt10">
+							<ul>
+								<li><img src="../images/avatar.png"/></li>
+								<li><img src="../images/avatar.png"/></li>
+								<li><img src="../images/avatar.png"/></li>
+								<li class="warning">
+									<img src="../images/avatar.png"/>
+									<i></i>
+								</li>
+								<li class="warning">	
+									<img src="../images/avatar.png"/>
+									<p>50%</p>
+								</li>
+								<li class="input">+<input name="" id="" value="+" type="file" /></li>
+							</ul>
+						</div>
+						<div class="shareArea fn-clear mt10">
+							<label>同步到</label>
+							<span class="qq"><b></b></span>
+							<span class="wb"><b></b></span>
+							<span class="wx"><b></b></span>
+						</div>
+				</div>
+			</section>	
+		</article>	
+		<article class="bottomBtn"><a href="#">发表</a></article>
+	</body>
+</html>
+<script src="../js/zepto.min.js"></script>
+<script src="../js/jacky.js"></script>
+<script src="../js/common.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('.operationBox span').on('tap',function(){
+			var state=$(this).data('state');
+			if(state){
+				$(this).data('state',false);
+				$(this).addClass('on');
+			}else{
+				$(this).data('state',true);
+				$(this).removeClass('on');
+			}
+			
+		});
+		$('.shareArea span').on('tap',function(){
+			$(this).toggleClass("cur");
+		});
+	})
+</script>

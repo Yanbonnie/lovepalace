@@ -1,0 +1,144 @@
+<!DOCTYPE html >
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="name=Jacky"/>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="email=no" />
+		<title>搜索</title>
+		<link href="../css/common.css" rel="stylesheet" type="text/css">
+		<link href="../css/user.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<script type="text/javascript" src="../js/loading.js"></script>
+		<article class="wrap search">
+			<header class="head02">
+				<a class="back"></a>
+				<h2>搜索</h2>
+			</header>
+			<section class="content">
+				<h3 class="title">你的地点</h3>
+				<div class="item arrow box">
+					<p class="icon inline-box box-center">
+						<img src="../images/common/icon_address.png"/>
+					</p>
+					<p class="txt flex01 inline-box box-left">
+						<label class="shengl">选择城市</label>
+					</p>
+					<p class="flex01 box box-left">
+						<select class="select box">
+	                        <option value="1">中国</option>
+	                        <option value="2">美国</option>
+	                        <option value="3">英国</option>
+	                    </select> 
+					</p>
+				</div>
+				<h3 class="title">你的基本信息</h3>
+				<div class="item box">
+					<p class="icon inline-box box-center">
+						<img src="../images/common/icon_time.png"/>
+					</p>
+					<p class="txt flex01 inline-box box-left">
+						<label class="shengl">入住时间</label>
+					</p>
+					<p class="flex01">
+						<label class="data">年/月/日</label> 
+					</p>
+				</div>
+				<div class="item arrow box">
+					<p class="icon inline-box box-center">
+						<img src="../images/common/icon_time.png"/>
+					</p>
+					<p class="txt flex01 inline-box box-left">
+						<label class="shengl">天数</label>
+					</p>
+					<p class="flex01 box box-left">
+						<select class="select box">
+	                        <option value="1">1</option>
+	                        <option value="2">2</option>
+	                        <option value="3">3</option>
+	                    </select> 
+					</p>
+				</div>
+				<div class="item arrow box">
+					<p class="icon inline-box box-center">
+						<img src="../images/common/icon_time.png"/>
+					</p>
+					<p class="txt flex01 inline-box box-left">
+						<label class="shengl">人数</label>
+					</p>
+					<p class="flex01 box box-left">
+						<select class="select box">
+	                        <option value="1">1</option>
+	                        <option value="2">2</option>
+	                        <option value="3">3</option>
+	                    </select> 
+					</p>
+				</div>
+				<h3 class="title">你的需求</h3>
+				<div class="demand fn-clear">
+					<p class="fl">
+						<span class="fl check cur" data-state = "false">
+							<b></b>
+						</span>
+						<label class="fl">家庭团队</label>
+					</p>
+					<p class="fl">
+						<span class="fl check" data-state = "true">
+							<b></b>
+						</span>
+						<label class="fl">家庭团队</label>
+					</p>
+					<p class="fl">
+						<span class="fl check" data-state = "true">
+							<b></b>
+						</span>
+						<label class="fl">家庭团队</label>
+					</p>
+					<p class="fl">
+						<span class="fl check" data-state = "true">
+							<b></b>
+						</span>
+						<label class="fl">家庭团队</label>
+					</p>
+					<p class="fl">
+						<span class="fl check" data-state = "true">
+							<b></b>
+						</span>
+						<label class="fl">家庭团队</label>
+					</p>
+					<p class="fl"></p>
+				</div>
+				<div class="btn" onclick='Jacky.util.pageLoad.show({txt:"搜索中"})'>
+					<a></a>
+				</div>
+				
+			</section>
+		</article>	
+	</body>
+</html>
+<script src="../js/zepto.min.js"></script>
+<script src="../js/mdater.js"></script>
+<script src="../js/jacky.js"></script>
+<script src="../js/common.js"></script>
+<script type="text/javascript">
+	$('.search .data').mdater();//选择日期
+	$(function(){
+		//需求选择
+		$('.check').on('tap',function(){
+			var thisCheck=$(this),
+				state=thisCheck.data('state');
+			if(state){
+				thisCheck.addClass('cur');
+				thisCheck.data('state',false);
+			}else{
+				thisCheck.removeClass('cur');
+				thisCheck.data('state',true);
+			}
+			
+			
+		})
+	});
+</script>

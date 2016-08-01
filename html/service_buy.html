@@ -1,0 +1,66 @@
+<!DOCTYPE html >
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="name=Jacky"/>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="email=no" />
+		<title>我的服务</title>
+		<link href="../css/common.css" rel="stylesheet" type="text/css">
+		<link href="../css/product.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<script type="text/javascript" src="../js/loading.js"></script>
+		<article class="wrap  serviceIndex">
+			<header class="head02">
+				<a class="back"></a>
+				<h2>我的服务</h2>
+				<a class="more" onclick="popup({elem:'.nav',coverMove:true})"></a>
+			</header>
+			<nav class="nav hide" data-state="true">
+				<li><a href="#">菜单</a></li>
+				<li><a href="#">菜单</a></li>
+				<li><a href="#">菜单</a></li>
+				<li><a href="#">菜单</a></li>
+			</nav>
+			<section class="content">	
+				<nav class="navBox">
+					<a href="#"><span>订购服务</span></a>
+					<a href="#" class="active"><span>已购服务</span></a>
+				</nav>	
+				<ul class="serviceList mt10">
+					<li class="box user-select">
+						<p class="icon inline-box box-center"><img src="../images/product/icon_plane.png"/></p>
+						<p class="txt flex01 box box-vertical box-vertical-left">
+							<label>接机服务</label>
+							<label class="f12 shengl">2016-01-03 白云机场白云机场白云机场白云机场白云机场白云机场白云机场</label>
+						</p>
+						<p class="btn flex01 box box-right">已购买</p>
+					</li>
+					<li class="box user-select">
+						<p class="icon inline-box box-center"><img src="../images/product/icon_gaotie.png"/></p>
+						<p class="txt flex01 box box-vertical box-vertical-left">
+							<label>高铁接驳</label>
+							<label class="f12 shengl">2016-01-03 广州南站</label>
+						</p>
+						<p class="btn flex01 box box-right">已完成</p>
+					</li>
+					<li class="box user-select">
+						<p class="icon inline-box box-center"><img src="../images/product/icon_car.png"/></p>
+						<p class="txt flex01 box box-vertical box-vertical-left">
+							<label>专车</label>
+							<label class="f12 shengl">2016-01-03 广州南站</label>
+						</p>
+						<p class="btn flex01 box box-right">已购买</p>
+					</li>
+				</ul>
+			</section>	
+			</ul>
+		</article>			
+	</body>
+</html>
+<script src="../js/zepto.min.js"></script>
+<script src="../js/jacky.js"></script>
+<script src="../js/common.js"></script>

@@ -1,0 +1,378 @@
+<!DOCTYPE html >
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="name=Jacky"/>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="email=no" />
+		<title>订单详情</title>
+		<link href="../css/common.css" rel="stylesheet" type="text/css">
+		<link href="../css/product.css" rel="stylesheet" type="text/css">
+		<link href="../css/mobiscroll.css" rel="stylesheet" type="text/css">
+		<style>
+			.price_div{color: #f00;margin-top: -30px;font-size: 10px;}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript" src="../js/loading.js"></script>
+		<article class="wrap  productBook">
+			<header class="head02">
+				<a class="back"></a>
+				<h2>预订</h2>
+				<a class="more" onclick="popup({elem:'.nav',coverMove:true})"></a>
+			</header>
+			<nav class="nav hide" data-state="true">
+				<li><a href="#">菜单</a></li>
+				<li><a href="#">菜单</a></li>
+				<li><a href="#">菜单</a></li>
+				<li><a href="#">菜单</a></li>
+			</nav>
+			<section class="content lazy">
+				<div class="orderList lazy">
+					<div class="box">
+						<div class="imgBox inline-box"><img src="../images/common/default_big.jpg" data-src="../images/order/img_F.jpg"/></div>
+						<div class="textBox flex01">
+							<h3 class="shengl">爱色丽精品别墅凤泉路6号爱色丽精品别墅凤泉路6号爱色丽精品别墅凤泉路6号</h3>
+							<p class="shengl">中国，广州，番禺区，汉溪长隆</p>
+						</div>
+					</div>
+				</div>
+				<ul class="timeBox fn-clear">
+					<li>
+						<p>入住时间</p>
+						<span data-mdtype='2' class="data">2016-1-21</span>
+					</li>
+					<li>
+						<p>离开时间</p>
+						<span data-mdtype='1' class="data">2016-1-28</span>
+					</li>
+					<li>
+						<p>天数</p>
+						<span>2天</span>
+					</li>
+				</ul>
+				<div class="service selecting fn-clear mt10">
+					<h4>房间选择</h4>
+					<ul>
+						<li class="user-select">
+							<a>
+								<label class="fl">整套别墅预定</label>
+								<span class="select2"><b class=""></b></span>
+							</a>
+						</li>
+						<li class="user-select">
+							<a>
+								<label class="fl">单独房间预定</label>
+								<span class="select2"><b class=""></b></span>
+							</a>
+						</li>
+					</ul>
+					<div class="room">
+						<div>
+							<span class="roomactive">101房</span>
+							<span>102房</span>
+							<span>103房</span>
+							<span class="disable">104房</span>
+							<span>105房</span>
+							<span>106房</span>
+							<span>107房</span>
+							<span>108房</span>
+						</div>
+					</div>
+				</div>
+				<div class="service cleanning fn-clear mt10">
+					<h4>清洁服务</h4>
+					<ul>
+						<li data-attr="time">
+							<em class="icon1"></em>
+							<span class="select"><b></b></span>
+							<p>常规清洁</p>
+							<span class="timeData">01:13 - 01:05</span>
+						</li>
+						<li data-attr="time">
+							<em class="icon2"></em>
+							<span class="select"><b></b></span>
+							<p>深度清洁</p>
+							<span class="timeData">01:13 - 01:05</span>
+						</li>
+					</ul>
+				</div>
+				<div class="service upgrade fn-clear">
+					<h4>升级服务</h4>
+					<ul>
+						<li>
+							<em class="icon3"></em>
+							<span class="select"><b></b></span>
+							<p>HERMES</p>
+							<span>洗浴套装</span>
+						</li>
+						<li>
+							<em class="icon3"></em>
+							<span class="select"><b></b></span>
+							<p>BVLGARI</p>
+							<span>洗浴套装</span>
+						</li>
+						<li>
+							<em class="icon3"></em>
+							<span class="select"><b></b></span>
+							<p>FERAGA</p>
+							<span>洗浴套装</span>
+						</li>
+						<li data-attr="area">
+							<em class="icon4"></em>
+							<span class="select" onclick="return false"><b></b></span>
+							<p>接机服务</p>
+							<span class="timeData">白云机场 15:50</span>
+						</li>
+						<li>
+							<em class="icon5"></em>
+							<span class="select"><b></b></span>
+							<p>高铁接驳</p>
+						</li>
+						<li>
+							<em class="icon6"></em>
+							<span class="select"><b></b></span>
+							<p>专车</p>
+						</li>
+					</ul>
+				</div>			
+				<div class="service insurance fn-clear">
+					<h4>保险</h4>
+					<ul>
+						<li>
+							<em class="icon7"></em>
+							<span class="select"><b></b></span>
+							<p>友邦保险100万意外险</p>
+						</li>
+					</ul>
+				</div>
+				<div class="orderDetails mt10">
+					<table class="houseInfor"  border="8" >
+						<tr><td>房费：￥712 X 2天</td><td>￥1424</td></tr>
+						<tr><td>清洁费</td><td>￥50</td></tr>
+						<tr><td>服务费</td><td>￥50</td></tr>
+						<tr><td>保险费</td><td>￥60</td></tr>
+						<tr class="last"><td>总价</td><td>￥1574</td></tr>
+					</table>
+					<div class="sweet">你将跳转到微信支付。您必须完成此过程，否则订单无法生效。</div>
+					<table id="info" class="personInfor mt10"  border="8" >
+						<tr><th colspan="3">入住信息</th></tr>
+						<tr class="item"><td class="name">李响声</td><td class="card">440105196705060318</td><td class="phone">14567529884</td></tr>
+						<tr class="item"><td class="name">李响声</td><td class="card">440105196705060318</td><td class="phone">14567529884</td></tr>
+					</table>
+					<a class="addEnter">添加入住人</a>
+					<table class="personInfor mt10"  border="8" >
+						<tr><th colspan="3">预订人信息</th></tr>
+						<tr><td>张三</td><td>13913813716</td><td>mail@qq.com</td></tr>
+					</table>					
+				</div>
+				<div class="service fn-clear mt10">
+					<h4>房屋准则</h4>
+					<p class="f12">预订此房源即表示您同意遵守该房源的《房屋守则》。 室內請勿吸菸</p>
+					<textarea class="mt10" placeholder="留言给管家"></textarea>
+				</div>
+				<p class="agreements"><span class="select"><b></b></span>我同意《房屋守则》、退订政策及房屋退款政策。</p>
+			</section>	
+			</ul>
+		</article>	
+		<article class="orderSubmit">
+			<p>订单总额<span>￥1574</span></p>
+			<a class="submit" href="#">提交订单</a>
+		</article>
+		<!--时间段或者地点选择-->
+		<article class="selectArea hide fixed" data-state="true">
+			<div class="cover"></div>
+			<div class="bg_alert01">
+				<a class="close" onclick="popup({elem:'.selectArea'})"></a>
+				<h2></h2>
+				<div class="content">
+					<div class="txt">
+						<div class="selectTime">
+							<p class="box"><label class="inline-box">请输入起始时间：</label><span class="timeBox flex01 first" data-name="time"></span></p>
+							<p class="box"><label class="inline-box">请输入结束时间：</label><span class="timeBox flex01 second" data-name="time"></span></p>
+							<a href="javascript:;" onclick="valueResult(this)">确认</a>
+						</div>
+						<div class="selectAddress">
+							<p class="box"><label class="inline-box">请输入机场名字：</label><input class="flex01"  type="text" class="first"/></p>
+							<p class="box"><label class="inline-box">预计到达时间：</label><span class="timeBox flex01 second" data-name="time"></span></p>
+							<a href="javascript:;" onclick="valueResult(this)">确认</a>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</article>
+		<!--信息-->
+		<article class="selectInfo hide fixed" data-state="true">
+			<div class="cover"></div>
+			<div class="bg_alert01">
+				<a class="close" onclick="popup({elem:'.selectInfo'})"></a>
+				<h2></h2>
+				<div class="content">
+					<div class="txt">
+						<p class="box"><label class="inline-box">姓名：</label><input class="flex01" id="name"  type="text"/></p>
+						<p class="box"><label class="inline-box">身份证：</label><input class="flex01" id="card"  type="text"/></p>
+						<p class="box"><label class="inline-box">手机号：</label><input class="flex01" id="phone"  type="tel"/></p>
+						<p class="btn01"><a class="confirm" href="javascript:;">确认</a></p>
+						<p class="btn02"><a class="updata fl" href="javascript:;">修改</a><a class="del fr" href="javascript:;">删除</a></p>
+					</div>
+					
+				</div>
+			</div>
+		</article>
+	</body>
+</html>
+<script src="../js/zepto.min.js"></script>
+<script src="../js/mdater.js"></script>
+<script src="../js/mobiscroll.min.js"></script>
+<script src="../js/jacky.js"></script>
+<script src="../js/common.js"></script>
+<script type="text/javascript">
+	/*--新修改(2016-5-26 18:01)  开始--*/
+	var arr = [];  //临时数组
+	var arr1 = [
+		[2016, 7, 10],
+		[2016, 5, 12],
+		[2016, 9, 10]
+	];
+	var arr2 = [  //初始化时不能选的日期
+		[2016, 7, 11],
+		[2016, 5, 13],
+		[2016, 9, 11]
+	];
+	/*--新修改(2016-5-26 18:01)  结束--*/
+
+	$('.data').mdater({
+//		minDate : new Date(2016, 2, 10)
+	});
+	
+	$(function(){
+		$('.select').on('tap',function(event){
+			event.preventDefault();
+			event.stopPropagation();
+			if($(this).children('b').hasClass('active')){
+				$(this).children('b').removeClass('active');
+			}else{
+				$(this).children('b').addClass('active');
+			}
+		})
+		//房间选择
+		$('.select2').on('tap',function(event){
+			event.preventDefault();
+			event.stopPropagation();
+			var ind = $(this).parent().parent().index();
+			if(ind == 1){
+				$(".room").css("display", "block");
+			}else{
+				$(".room").css("display", "none");
+			}
+			$('.select2').each(function(){
+				$(this).children('b').removeClass('active');
+			});
+			if($(this).children('b').hasClass('active')){
+				$(this).children('b').removeClass('active');
+			}else{
+				$(this).children('b').addClass('active');
+			}
+		})
+		//房号选择
+		$('.room div span').on('tap',function(event){
+			event.preventDefault();
+			event.stopPropagation();
+			if($(this).hasClass('disable')){
+				return false;
+			};
+			$('.room div span').each(function(){
+				$(this).removeClass('roomactive');
+			});
+			if($(this).hasClass('roomactive')){
+				$(this).removeClass('roomactive');
+			}else{
+				$(this).addClass('roomactive');
+			}
+		})
+		//时间
+		$('.service li').on('tap',function(event){
+			event.preventDefault();
+			timeSelect(this);
+		})
+		$('[data-name=time]').each(function(i){
+	    	$('[data-name=time]').eq(i).mobiscroll().time({
+		        theme:'android-ics light',
+		        mode:'scroller',
+		        lang: 'zh',
+		        display:'modal',
+		       	preset: 'time',
+		        timeFormat: 'HH:ii',
+		        buttons : ['set'],
+		        callback : function(a){
+		        	$('[data-name=time]').eq(i).html(a);
+		        }
+		    });
+	    })
+		//日期控件确认回调入口
+		$('body').delegate('.md_ok','tap',function(e){
+			e.preventDefault();
+			if(mdtype==1){//离开日期入口
+				console.log(mdDate);
+			}else if(mdtype==2){//开始日期入口
+				
+			}
+		});
+		//添加入住信息UI
+		$('.addEnter').on('tap',function(e){
+			e.preventDefault();
+			$('.btn01').show().siblings('.btn02').hide();  //按钮	
+			popup({elem:'.selectInfo'});
+		});
+		
+		//确认入住信息opt
+		$('.selectInfo .confirm').on('tap',function(e){
+			var name=$('#name').val(),
+				card=$('#card').val(),
+				phone=$('#phone').val();
+			
+			$('#info tbody').append('<tr class="item"><td class="name">'+name+'</td><td class="card">'+card+'</td><td class="phone">'+phone+'</td></tr>');
+			popup({elem:'.selectInfo'});
+			Jacky.util.alertBox('确认成功');
+		});
+		//修改入住信息UI
+		$('#info').delegate('.item','tap',function(e){
+			e.preventDefault();
+			var name=$(this).find('.name').text(),
+				card=$(this).find('.card').text(),
+				phone=$(this).find('.phone').text()
+				index=$(this).index();
+			$('.selectInfo').data('index',index);
+			$('#name').val(name);
+			$('#card').val(card);
+			$('#phone').val(phone);
+			$('.btn02').show().siblings('.btn01').hide();  //按钮
+			popup({elem:'.selectInfo'});
+		});
+		//删除入住信息opt
+		$('.selectInfo .del').on('tap',function(e){
+			e.preventDefault();
+			var i=$('.selectInfo').data('index');
+			$('#info .item').eq(i).remove();
+			popup({elem:'.selectInfo'});
+			Jacky.util.alertBox('删除成功');
+		});
+		//修改入住信息opt
+		$('.selectInfo .updata').on('tap',function(e){
+			e.preventDefault();
+			var i=$('.selectInfo').data('index')-1,
+				item=$('#info .item').eq(i),
+				name=$('#name').val(),
+				card=$('#card').val(),
+				phone=$('#phone').val();
+			item.find('.name').text(name);
+			item.find('.card').text(card);
+			item.find('.phone').text(phone);
+			popup({elem:'.selectInfo'});
+			Jacky.util.alertBox('修改成功');
+		});
+	})
+</script>
